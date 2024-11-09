@@ -1,0 +1,5 @@
+# Ignore case while completing
+set completion-ignore-case on
+
+# Set TAB key to menu-complete
+TAB: menu-complete

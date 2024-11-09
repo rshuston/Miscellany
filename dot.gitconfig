@@ -1,0 +1,13 @@
+[credential]
+	helper = osxkeychain
+[init]
+	defaultBranch = master
+[pull]
+	rebase = true
+[push]
+	default = simple
+[alias]
+	last = log -1 HEAD
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	lg1 = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	br = branch --sort=-committerdate --format='%(color:red)%(committerdate:short)%(color:reset) %(refname:short)'
