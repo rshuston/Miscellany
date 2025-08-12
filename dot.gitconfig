@@ -7,7 +7,9 @@
 [push]
 	default = simple
 [alias]
-	last = log -1 HEAD
+	clobber = clean -fdx
+	last = log -1 HEAD --stat
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-	lg1 = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-	br = branch --sort=-committerdate --format='%(color:red)%(committerdate:short)%(color:reset) %(refname:short)'
+	lg1 = log --first-parent --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cs) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	lsbr = branch --sort=-committerdate --format='%(color:red)%(committerdate:short)%(color:reset) %(refname:short)'
+	lsbrR = branch --remotes --sort=-committerdate --format='%(color:red)%(committerdate:short)%(color:reset) %(refname:short)'
